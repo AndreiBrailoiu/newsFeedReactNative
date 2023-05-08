@@ -5,7 +5,7 @@ import * as SQLite from 'expo-sqlite';
 
 export default function WelcomePage() {
     const [data, setData] = useState([]); // array to store fetched news articles
-    const url = "https://newsapi.org/v2/top-headlines?country=us&apiKey=c807b57a2ab640b9a970a74077ad864c";
+    const url = "https://newsapi.org/v2/top-headlines?country=us&apiKey=YOUR_API_KEY";
     const [animation] = useState(new Animated.Value(0)); // animation value for card animations
     const db = SQLite.openDatabase('news.db'); // SQLite database instance
     const [isRefreshing, setIsRefreshing] = useState(false); // state variable to control the refresh
