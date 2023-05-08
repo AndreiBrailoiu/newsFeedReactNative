@@ -8,13 +8,13 @@ export default function UserPage() {
     const db = SQLite.openDatabase('news.db');
     const [data, setData] = useState([]);
     const [search, setSearch] = useState('');
-    const url = "https://newsapi.org/v2/everything?q=" + search + "&apiKey=c807b57a2ab640b9a970a74077ad864c";
-    const urlCat = "https://newsapi.org/v2/top-headlines?country=us&category=" + search + "&apiKey=c807b57a2ab640b9a970a74077ad864c";
+    const url = "https://newsapi.org/v2/everything?q=" + search + "&apiKey=YOUR_API_KEY";
+    const urlCat = "https://newsapi.org/v2/top-headlines?country=us&category=" + search + "&apiKey=YOUR_API_KEY";
     const [location, setLocation] = useState(null);
     const [weather, setWeather] = useState(null);
     const [showWeather, setShowWeather] = useState(true);
     const [selectedIndex, setSelectedIndex] = useState(2);
-    const weatherUrl = "https://api.openweathermap.org/data/2.5/weather?lat=" + (location ? location.coords.latitude : '') + "&lon=" + (location ? location.coords.longitude : '') + "&units=metric&appid=fa8990163c56563bbb857c2ca0cca830";
+    const weatherUrl = "https://api.openweathermap.org/data/2.5/weather?lat=" + (location ? location.coords.latitude : '') + "&lon=" + (location ? location.coords.longitude : '') + "&units=metric&appid=YOUR_API_KEY";
 
     useEffect(() => {
         db.transaction(trx => {
